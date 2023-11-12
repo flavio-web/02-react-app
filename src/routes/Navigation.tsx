@@ -8,7 +8,7 @@ export const Navigation = () => {
     return (
         <>
             <Suspense fallback={ <span>Loading...</span>} >
-                <BrowserRouter>
+                <BrowserRouter future={{ v7_startTransition: true }} >
                     <div className="main-layout">
                         <nav>
                             <img src={logo} alt="" />
@@ -35,7 +35,7 @@ export const Navigation = () => {
                                 })
                             }
 
-                            <Route path="/*" element={ <Navigate to={ routes[0].to } replace />} />
+                             <Route path="/*" element={ <Navigate to={ routes[0].to } replace />} />
                         </Routes>
 
                     </div>
