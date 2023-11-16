@@ -1,4 +1,5 @@
-import { ProductButtons, ProductCard, ProductImage, ProductTitle } from "../components"
+import { ProductButtons, ProductCard, ProductImage, ProductTitle } from "../components";
+import '../styles/custom-styles.css';
 
 const products = [
     {
@@ -21,7 +22,7 @@ const products = [
 
 export const ShoppingPage = () => {
   return (
-    <div>
+    <div >
         <h1>Shopping Store</h1>
         <hr />
 
@@ -33,10 +34,10 @@ export const ShoppingPage = () => {
 
         {
            products.map(product =>{
-                return <ProductCard key={ product.id } product={ product }  >
-                    <ProductImage />
-                    <ProductTitle />
-                    <ProductButtons/>
+                return <ProductCard key={ product.id } product={ product } className="bg-dark text-white" >
+                    <ProductImage className="custom-image"/>
+                    <ProductTitle className=" text-bold"/>
+                    <ProductButtons className="custom-buttons"/>
                 </ProductCard>
             })
         }
@@ -50,10 +51,16 @@ export const ShoppingPage = () => {
 
             }}>Otra forma</h1>
 
-            <ProductCard product={ products[0] }  >
+            <ProductCard product={ products[0] } className="bg-dark text-white" >
+                <ProductCard.Image className="custom-image" />
+                <ProductCard.Title title={ 'Capuchino' } className=" text-bold" />
+                <ProductCard.Buttons className="custom-buttons" />  
+            </ProductCard>
+
+            <ProductCard product={ products[0] } style={{ backgroundColor: '#70D1F8'}}>
                 <ProductCard.Image />
-                <ProductCard.Title title={ 'Capuchino' } />
-                <ProductCard.Buttons/>  
+                <ProductCard.Title title={ 'Capuchino' } style={{ color: '#333', fontSize: '18px', fontWeight: 'bold' }} />
+                <ProductCard.Buttons style={{ display: 'flex', justifyContent: 'end'}} />  
             </ProductCard>
 
           
