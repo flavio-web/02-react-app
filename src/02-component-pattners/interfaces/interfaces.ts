@@ -5,12 +5,33 @@ export interface ProductCardProps {
     children?   : ReactElement | ReactElement[];
     className?  : string; 
     style?      : CSSProperties;
+    onChange?   : ( args: OnChangeArgs ) => void;
+    value?      : number;
+}
+
+export interface OnChangeArgs {
+    product : Product;
+    count   : number;
+}
+
+export interface UseProductArgs{
+    product     : Product;
+    onChange?   : ( args: OnChangeArgs ) => void;
+    value?      : number;
 }
 
 export interface Product {
     id      : string;
     title   : string;
     img?    : string;
+}
+
+export interface ProductInCart extends Product{
+   count: number;
+}
+
+export interface ShoppingCart{
+    [key: string]: ProductInCart;
 }
 
 export interface ProductContextProps{
