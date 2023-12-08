@@ -1,0 +1,82 @@
+[
+    {
+        "type": "text",
+        "name": "firstName",
+        "placeholder": "First Name",
+        "label": "First Name",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "description": "Requerido"
+            },
+            {
+                "type": "minLength",
+                "value": 5,
+                "description": "Debe de tener 5 caracteres mínimo"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "lastName",
+        "placeholder": "Last Name",
+        "label": "Last Name",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "description": "Requerido"
+            },
+            {
+                "type": "minLength",
+                "value": 5,
+                "description": "Debe de tener 5 caracteres mínimo"
+            }
+        ]
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "flavio@google.com",
+        "label": "Email",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "description": "Requerido"
+            },
+            {
+                "type": "email",
+                "description": "Email incorrecto"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "favoriteGame",
+        "label": "Favorite Game",
+        "value": "",
+        "options": [
+            {
+                "id": 1,
+                "label": "Super Smash"
+            },
+            {
+                "id": 2,
+                "label": "Metal Gear"
+            },
+            {
+                "id": 3,
+                "label": "Resident Evail"
+            }
+        ],
+        "validations": [
+            {
+                "type": "required",
+                "description": "Requerido"
+            }
+        ]
+    }
+    
+]
